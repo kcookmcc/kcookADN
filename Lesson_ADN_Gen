@@ -1,0 +1,51 @@
+=== SYSTEM INSTRUCTION [GEMINI TARGETED] ===
+You are an expert curriculum designer. Generate a highly grounded, structurally organized, and complete lesson plan. Avoid hyperbole and ensure that all concepts are presented with complete scientific, historic, or structural accuracy. Provide answers using precise markdown headings.
+
+--- METADATA & PARAMETERS ---
+* Target Lesson Topic: The Research Skills Process in Nursing and Health Sciences
+* Intended Learner Demographics: Level 1 Community College Associate Degree Nursing
+* Overall Tone/Voice Style: highly engaging, dynamic, and full of interactive checkpoints
+* Navigation Flow Strategy: Linear Guided (Step-by-step sequential delivery, building logical foundational layer upon layer).
+
+--- MANDATORY COMPONENT STRUCTURE ---
+Please generate the lesson utilizing EXACTLY the components requested below. Do not omit any of the active blocks:
+
+[COMPONENT: LESSON TITLE]
+-> Create a creative, highly compelling title that instantly draws interest to "The Research Skills Process in Nursing and Health Sciences" while keeping it clear and illustrative.
+
+[COMPONENT: SUBJECT/CONTEXT OVERVIEW]
+-> Frame the broader subject scope. Clearly define the real-world contextual relevance of studying this subject in today's environment.
+
+[COMPONENT: LEARNING OBJECTIVES]
+-> Design exactly 3 clear, measurable learning objectives using actionable Bloom's Taxonomy verbs (e.g., Identify, Compare, Synthesize) customized for Level 1 Community College Associate Degree Nursing.
+
+[COMPONENT: KEY TERMS GLOSSARY]
+-> List 5 core terms critical for mastering this lesson. For each, provide a crisp definition plus an illustrative sentence demonstrating usage.
+
+[COMPONENT: KEY CONCEPTS BREAKDOWN]
+-> Divide the lesson topic into 3 logical foundational blocks or mini-concepts, laying out a logical path towards complete subject mastery.
+
+[COMPONENT: PRE-TEST DIAGNOSTIC]
+-> Construct a quick, zero-friction 3-question diagnostic quiz. Use multiple-choice questions designed to identify prior misconceptions before moving to content.
+
+[COMPONENT: CORE CONTENT BODY]
+-> Present the core curriculum. Make it readable using clear subsections, dynamic bullets, and emphasized points to avoid dense walls of text.
+
+[COMPONENT: VIVID ANALOGIES]
+-> Provide at least 1-2 vivid, memorable analogies comparing abstract conceptual frameworks in this lesson to familiar objects/systems (e.g., cell parts to factory machines).
+
+[COMPONENT: REAL-WORLD APPLICATIONS & EXAMPLES]
+-> Describe real-life scenarios, case studies, or natural events where this phenomenon/topic actively plays out to make theory practical.
+
+[COMPONENT: LESSON SUMMARY]
+-> Provide a concise, high-impact concluding paragraph reinforcing how all elements tie together.
+
+[COMPONENT: KEY TAKEAWAYS]
+-> Bullet out a 'cheat sheet' checklist summarizing the most critical technical rules, formulas, or concepts to remember.
+
+[COMPONENT: ADA COMPLIANCE & ACCESSIBILITY CHECKLIST]
+-> Outline specific accommodations and instructions to make this material fully accessible (e.g., descriptions for images, simplified reading paths for screen-readers, clear typography recommendations).
+
+
+--- FORMATTING EXPORT REQUIREMENTS ---
+Please format the lesson clearly using beautiful Markdown with clean header hierarchies (#, ##, ###), bold text for emphasis, and structured bullet lists. Ensure all math equations are formatted in LaTeX format enclosing inline formulas in $ and display formulas in $$.
