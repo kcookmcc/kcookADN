@@ -1,51 +1,755 @@
-=== SYSTEM INSTRUCTION [GEMINI TARGETED] ===
-You are an expert curriculum designer. Generate a highly grounded, structurally organized, and complete lesson plan. Avoid hyperbole and ensure that all concepts are presented with complete scientific, historic, or structural accuracy. Provide answers using precise markdown headings.
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScribeCraft: Interactive AI Lesson Prompt Architect</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth state transitions */
+        * {
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+        }
+        /* Custom scrollbar style */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 92, 246, 0.3);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 92, 246, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans antialiased">
 
---- METADATA & PARAMETERS ---
-* Target Lesson Topic: The Research Skills Process in Nursing and Health Sciences
-* Intended Learner Demographics: Level 1 Community College Associate Degree Nursing
-* Overall Tone/Voice Style: highly engaging, dynamic, and full of interactive checkpoints
-* Navigation Flow Strategy: Linear Guided (Step-by-step sequential delivery, building logical foundational layer upon layer).
+    <!-- Header Area -->
+    <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-brand-600 text-white rounded-xl shadow-lg shadow-brand-500/20">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight bg-gradient-to-r from-brand-600 to-indigo-500 dark:from-brand-400 dark:to-indigo-300 bg-clip-text text-transparent">
+                        ScribeCraft Prompt Architect
+                    </h1>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Interactive Educational Lesson Generator</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle dark mode">
+                    <!-- Moon Icon -->
+                    <svg id="themeMoon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <!-- Sun Icon -->
+                    <svg id="themeSun" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.364l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
 
---- MANDATORY COMPONENT STRUCTURE ---
-Please generate the lesson utilizing EXACTLY the components requested below. Do not omit any of the active blocks:
+    <!-- Main Content Grid -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Controls Column (Left) -->
+        <section class="lg:col-span-7 space-y-6 flex flex-col">
+            
+            <!-- Quick Configurations Card -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+                <h2 class="text-md font-bold mb-4 text-brand-600 dark:text-brand-400 flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
+                    <span>1. Basic Setup Parameters</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="lessonTopic" class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">Lesson Topic / Focus</label>
+                        <input type="text" id="lessonTopic" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 text-sm outline-none" value="Photosynthesis and Cellular Respiration">
+                    </div>
 
-[COMPONENT: LESSON TITLE]
--> Create a creative, highly compelling title that instantly draws interest to "The Research Skills Process in Nursing and Health Sciences" while keeping it clear and illustrative.
+                    <div>
+                        <label for="targetAudience" class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">Target Audience</label>
+                        <input type="text" id="targetAudience" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 text-sm outline-none" value="High School Biology Students">
+                    </div>
 
-[COMPONENT: SUBJECT/CONTEXT OVERVIEW]
--> Frame the broader subject scope. Clearly define the real-world contextual relevance of studying this subject in today's environment.
+                    <div>
+                        <label for="lessonTone" class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">Pedagogical Tone / Style</label>
+                        <select id="lessonTone" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 text-sm outline-none">
+                            <option value="highly engaging, dynamic, and full of interactive checkpoints">Engaging & Active</option>
+                            <option value="rigorous, academic, and deeply technical">Technical & Academic</option>
+                            <option value="Socratic, questioning, and discovery-driven">Socratic Dialogue</option>
+                            <option value="story-driven, narrative-based, and highly visual">Narrative & Creative</option>
+                            <option value="extremely simple, clear, and focused on fundamental building blocks">Beginner-Friendly & Simple</option>
+                        </select>
+                    </div>
 
-[COMPONENT: LEARNING OBJECTIVES]
--> Design exactly 3 clear, measurable learning objectives using actionable Bloom's Taxonomy verbs (e.g., Identify, Compare, Synthesize) customized for Level 1 Community College Associate Degree Nursing.
+                    <div>
+                        <label for="aiPlatform" class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">AI Engine Optimization</label>
+                        <select id="aiPlatform" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 text-sm outline-none">
+                            <option value="gemini">Gemini 2.5 Flash / Pro (Highly Structured/Grounded)</option>
+                            <option value="gpt4">ChatGPT / GPT-4o (Direct System & Persona Rules)</option>
+                            <option value="claude">Claude 3.5 Sonnet (XML tags & In-depth Context)</option>
+                            <option value="generic">Universal (Platform Agnostic Markdown)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-[COMPONENT: KEY TERMS GLOSSARY]
--> List 5 core terms critical for mastering this lesson. For each, provide a crisp definition plus an illustrative sentence demonstrating usage.
+            <!-- Components Toggle (GRID / BUTTON SELECTS) -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm flex-grow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                    <h2 class="text-md font-bold text-brand-600 dark:text-brand-400 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                        <span>2. Include Lesson Components</span>
+                    </h2>
+                    
+                    <!-- Selection Controls -->
+                    <div class="flex items-center space-x-2">
+                        <button type="button" onclick="setAllComponents(true)" class="text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium">
+                            Select All
+                        </button>
+                        <button type="button" onclick="setAllComponents(false)" class="text-xs px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium">
+                            Clear All
+                        </button>
+                    </div>
+                </div>
 
-[COMPONENT: KEY CONCEPTS BREAKDOWN]
--> Divide the lesson topic into 3 logical foundational blocks or mini-concepts, laying out a logical path towards complete subject mastery.
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Select which active building blocks will be injected into the compiled prompt. Tap elements to toggle their presence in the final structure.</p>
 
-[COMPONENT: PRE-TEST DIAGNOSTIC]
--> Construct a quick, zero-friction 3-question diagnostic quiz. Use multiple-choice questions designed to identify prior misconceptions before moving to content.
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    
+                    <!-- Title Component Button -->
+                    <button id="btn-comp-title" onclick="toggleComponent('title')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Lesson Title</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
-[COMPONENT: CORE CONTENT BODY]
--> Present the core curriculum. Make it readable using clear subsections, dynamic bullets, and emphasized points to avoid dense walls of text.
+                    <!-- Subject Component Button -->
+                    <button id="btn-comp-subject" onclick="toggleComponent('subject')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Subject/Context</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
-[COMPONENT: VIVID ANALOGIES]
--> Provide at least 1-2 vivid, memorable analogies comparing abstract conceptual frameworks in this lesson to familiar objects/systems (e.g., cell parts to factory machines).
+                    <!-- Objectives Component Button -->
+                    <button id="btn-comp-objectives" onclick="toggleComponent('objectives')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Learning Objectives</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
-[COMPONENT: REAL-WORLD APPLICATIONS & EXAMPLES]
--> Describe real-life scenarios, case studies, or natural events where this phenomenon/topic actively plays out to make theory practical.
+                    <!-- Key Terms Component Button -->
+                    <button id="btn-comp-terms" onclick="toggleComponent('terms')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Key Terms Glossary</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
-[COMPONENT: LESSON SUMMARY]
--> Provide a concise, high-impact concluding paragraph reinforcing how all elements tie together.
+                    <!-- Key Concepts Component Button -->
+                    <button id="btn-comp-concepts" onclick="toggleComponent('concepts')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Key Concepts Block</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
-[COMPONENT: KEY TAKEAWAYS]
--> Bullet out a 'cheat sheet' checklist summarizing the most critical technical rules, formulas, or concepts to remember.
+                    <!-- Pre-Test Component Button -->
+                    <button id="btn-comp-pretest" onclick="toggleComponent('pretest')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Pre-Test Diagnostic</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
-[COMPONENT: ADA COMPLIANCE & ACCESSIBILITY CHECKLIST]
--> Outline specific accommodations and instructions to make this material fully accessible (e.g., descriptions for images, simplified reading paths for screen-readers, clear typography recommendations).
+                    <!-- Content Component Button -->
+                    <button id="btn-comp-content" onclick="toggleComponent('content')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Core Content Body</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
+                    <!-- Analogies Component Button -->
+                    <button id="btn-comp-analogies" onclick="toggleComponent('analogies')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Vivid Analogies</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
 
---- FORMATTING EXPORT REQUIREMENTS ---
-Please format the lesson clearly using beautiful Markdown with clean header hierarchies (#, ##, ###), bold text for emphasis, and structured bullet lists. Ensure all math equations are formatted in LaTeX format enclosing inline formulas in $ and display formulas in $$.
+                    <!-- Examples Component Button -->
+                    <button id="btn-comp-examples" onclick="toggleComponent('examples')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Real-world Examples</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
+
+                    <!-- Summary Component Button -->
+                    <button id="btn-comp-summary" onclick="toggleComponent('summary')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Key Summary Block</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
+
+                    <!-- Review Component Button -->
+                    <button id="btn-comp-review" onclick="toggleComponent('review')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Review & Post-Quiz</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
+
+                    <!-- Key Takeaways Component Button -->
+                    <button id="btn-comp-takeaways" onclick="toggleComponent('takeaways')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">Core Takeaways</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
+
+                    <!-- ADA Checklist Component Button -->
+                    <button id="btn-comp-ada" onclick="toggleComponent('ada')" class="component-toggle-btn text-left p-3 rounded-xl border flex flex-col justify-between h-20 bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-brand-500 hover:bg-brand-50/20 dark:hover:bg-brand-950/20">
+                        <span class="text-xs font-semibold tracking-wide uppercase text-slate-400 dark:text-slate-500">Component</span>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span class="font-bold text-sm text-slate-700 dark:text-slate-200">ADA Compliance</span>
+                            <span class="indicator-icon text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Choices for Navigation (Design Pattern Selection) -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+                <h2 class="text-md font-bold mb-3 text-brand-600 dark:text-brand-400 flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                    </svg>
+                    <span>3. Architectural Flow & Navigation</span>
+                </h2>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Choose how the generated lesson is structured and navigated by the learner.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="navigationGroup">
+                    <!-- Option 1: Linear -->
+                    <label class="relative flex items-start p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 cursor-pointer hover:border-brand-500">
+                        <div class="flex items-center h-5">
+                            <input type="radio" name="navigationPattern" value="linear" checked class="h-4 w-4 text-brand-600 border-slate-300 dark:border-slate-700 focus:ring-brand-500" onchange="triggerUpdate()">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <span class="font-bold text-slate-700 dark:text-slate-200">Linear (Guided Progression)</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Chronological layout designed for top-to-bottom mastery.</p>
+                        </div>
+                    </label>
+
+                    <!-- Option 2: Branching -->
+                    <label class="relative flex items-start p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 cursor-pointer hover:border-brand-500">
+                        <div class="flex items-center h-5">
+                            <input type="radio" name="navigationPattern" value="branching" class="h-4 w-4 text-brand-600 border-slate-300 dark:border-slate-700 focus:ring-brand-500" onchange="triggerUpdate()">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <span class="font-bold text-slate-700 dark:text-slate-200">Branching Choose-Your-Path</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Interactive choices leading to custom scenario sub-lessons.</p>
+                        </div>
+                    </label>
+
+                    <!-- Option 3: Modular Sandbox -->
+                    <label class="relative flex items-start p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 cursor-pointer hover:border-brand-500">
+                        <div class="flex items-center h-5">
+                            <input type="radio" name="navigationPattern" value="modular" class="h-4 w-4 text-brand-600 border-slate-300 dark:border-slate-700 focus:ring-brand-500" onchange="triggerUpdate()">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <span class="font-bold text-slate-700 dark:text-slate-200">Modular Sandbox Index</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Self-directed menu/dashboard allowing learners to explore freely.</p>
+                        </div>
+                    </label>
+
+                    <!-- Option 4: Socratic Loop -->
+                    <label class="relative flex items-start p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 cursor-pointer hover:border-brand-500">
+                        <div class="flex items-center h-5">
+                            <input type="radio" name="navigationPattern" value="socratic" class="h-4 w-4 text-brand-600 border-slate-300 dark:border-slate-700 focus:ring-brand-500" onchange="triggerUpdate()">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <span class="font-bold text-slate-700 dark:text-slate-200">Socratic Conversational Loop</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Continuous interactive query steps. Progress locks until answered.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Preview & Output Column (Right) -->
+        <section class="lg:col-span-5 flex flex-col space-y-6">
+            
+            <!-- Live Output Card -->
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm flex flex-col h-full min-h-[500px]">
+                
+                <div class="flex items-center justify-between mb-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
+                        </span>
+                        <h2 class="text-md font-bold text-slate-800 dark:text-slate-200">Live Prompt Preview</h2>
+                    </div>
+                    
+                    <!-- Copy Button -->
+                    <button onclick="copyPromptToClipboard()" class="flex items-center space-x-1.5 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 active:scale-95 text-white rounded-xl text-xs font-semibold shadow-md shadow-brand-500/10">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                        </svg>
+                        <span>Copy</span>
+                    </button>
+                </div>
+
+                <!-- Textarea Sandbox Output -->
+                <div class="relative flex-grow flex flex-col">
+                    <textarea id="promptOutput" class="w-full flex-grow p-4 bg-slate-950 text-slate-100 dark:bg-black font-mono text-xs rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-brand-500 outline-none resize-none" readonly></textarea>
+                </div>
+
+                <!-- Downloads & Alternative File Formats (Markdown, TXT, JSON) -->
+                <div class="mt-6 border-t border-slate-200 dark:border-slate-800 pt-4">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Download Prompt File</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <!-- Markdown Download -->
+                        <button onclick="downloadPrompt('md')" class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-slate-100 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300">
+                            <svg class="w-5 h-5 text-indigo-500 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            <span class="text-xs font-bold">Markdown</span>
+                            <span class="text-[9px] text-slate-400">.md</span>
+                        </button>
+
+                        <!-- Plain Text Download -->
+                        <button onclick="downloadPrompt('txt')" class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-slate-100 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300">
+                            <svg class="w-5 h-5 text-emerald-500 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            <span class="text-xs font-bold">Text Format</span>
+                            <span class="text-[9px] text-slate-400">.txt</span>
+                        </button>
+
+                        <!-- JSON Object Download -->
+                        <button onclick="downloadPrompt('json')" class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-slate-100 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300">
+                            <svg class="w-5 h-5 text-amber-500 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            <span class="text-xs font-bold">JSON Schema</span>
+                            <span class="text-[9px] text-slate-400">.json</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Custom Toast Notification System (Replaces Browser Alerts) -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 ease-out flex items-center space-x-2 bg-slate-900 text-white dark:bg-white dark:text-slate-950 px-4 py-3 rounded-xl shadow-2xl border border-slate-800 dark:border-slate-200">
+        <svg class="w-5 h-5 text-emerald-400 dark:text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span id="toastMsg" class="text-xs font-bold tracking-wide">Copied to Clipboard!</span>
+    </div>
+
+    <!-- Active Component State Engine (Inline Scripts) -->
+    <script>
+        // Active component state tracking
+        const components = {
+            title: true,
+            subject: true,
+            objectives: true,
+            terms: true,
+            concepts: true,
+            pretest: false,
+            content: true,
+            analogies: true,
+            examples: true,
+            summary: true,
+            review: true,
+            takeaways: true,
+            ada: false
+        };
+
+        // Initialize elements, UI states, themes
+        window.addEventListener('DOMContentLoaded', () => {
+            setupTheme();
+            updateUIStates();
+            generatePrompt();
+            
+            // Setup dynamic live rebuilding listeners for all basic inputs
+            document.getElementById('lessonTopic').addEventListener('input', generatePrompt);
+            document.getElementById('targetAudience').addEventListener('input', generatePrompt);
+            document.getElementById('lessonTone').addEventListener('change', generatePrompt);
+            document.getElementById('aiPlatform').addEventListener('change', generatePrompt);
+        });
+
+        // Toggle individual component state
+        function toggleComponent(key) {
+            components[key] = !components[key];
+            updateUIStates();
+            generatePrompt();
+        }
+
+        // Mass toggler helper
+        function setAllComponents(status) {
+            Object.keys(components).forEach(key => {
+                components[key] = status;
+            });
+            updateUIStates();
+            generatePrompt();
+        }
+
+        // Handle navigation option update
+        function triggerUpdate() {
+            generatePrompt();
+        }
+
+        // Synchronize JS States visually to HTML buttons
+        function updateUIStates() {
+            Object.keys(components).forEach(key => {
+                const btn = document.getElementById(`btn-comp-${key}`);
+                if (!btn) return;
+                
+                const indicator = btn.querySelector('.indicator-icon');
+                
+                if (components[key]) {
+                    // Active Styles
+                    btn.classList.remove('bg-slate-50', 'dark:bg-slate-950', 'border-slate-200', 'dark:border-slate-800');
+                    btn.classList.add('bg-brand-500/10', 'border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    
+                    // Checked Icon replacement
+                    indicator.innerHTML = `
+                        <svg class="w-4 h-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    `;
+                } else {
+                    // Inactive Styles
+                    btn.classList.remove('bg-brand-500/10', 'border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    btn.classList.add('bg-slate-50', 'dark:bg-slate-950', 'border-slate-200', 'dark:border-slate-800');
+                    
+                    // Unchecked Icon replacement
+                    indicator.innerHTML = `
+                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    `;
+                }
+            });
+        }
+
+        // Live Prompt Engine Compiler
+        function generatePrompt() {
+            const topic = document.getElementById('lessonTopic').value || '[Specify Topic]';
+            const audience = document.getElementById('targetAudience').value || '[Specify Audience]';
+            const tone = document.getElementById('lessonTone').value;
+            const platform = document.getElementById('aiPlatform').value;
+            const navigation = document.querySelector('input[name="navigationPattern"]:checked')?.value || 'linear';
+
+            let prompt = "";
+
+            // System instructions based on selected AI engine
+            if (platform === 'gemini') {
+                prompt += `=== SYSTEM INSTRUCTION [GEMINI TARGETED] ===\n`;
+                prompt += `You are an expert curriculum designer. Generate a highly grounded, structurally organized, and complete lesson plan. Avoid hyperbole and ensure that all concepts are presented with complete scientific, historic, or structural accuracy. Provide answers using precise markdown headings.\n\n`;
+            } else if (platform === 'gpt4') {
+                prompt += `=== SYSTEM INSTRUCTION [GPT-4 TARGETED] ===\n`;
+                prompt += `Act as an elite instructional designer and master educator. Your mission is to produce an exceptional pedagogical lesson framework optimized for maximum cognitive retention, structured logically according to standard visual hierarchy and learning taxonomies.\n\n`;
+            } else if (platform === 'claude') {
+                prompt += `=== SYSTEM INSTRUCTION [CLAUDE XML OPTIMIZED] ===\n`;
+                prompt += `You are a highly analytical curriculum architect. Format your final response strictly using clean XML block tags tags (e.g. <lesson_plan>, <component_title>, etc.) to compartmentalize each structural phase. This maximizes readability for conversational APIs.\n\n`;
+            } else {
+                prompt += `=== SYSTEM INSTRUCTION [UNIVERSAL MARKDOWN] ===\n`;
+                prompt += `You are an expert interactive educator. Below is a structured blueprint request for a comprehensive lesson. Maintain professional formatting standards using clean, readable markdown throughout.\n\n`;
+            }
+
+            // Core Payload Parameters
+            prompt += `--- METADATA & PARAMETERS ---\n`;
+            prompt += `* Target Lesson Topic: ${topic}\n`;
+            prompt += `* Intended Learner Demographics: ${audience}\n`;
+            prompt += `* Overall Tone/Voice Style: ${tone}\n`;
+            
+            // Navigation Mapping
+            prompt += `* Navigation Flow Strategy: `;
+            if (navigation === 'linear') {
+                prompt += "Linear Guided (Step-by-step sequential delivery, building logical foundational layer upon layer).\n";
+            } else if (navigation === 'branching') {
+                prompt += "Choose Your Path (Create decision-tree scenarios where the student decides paths/sub-paths of the topic depending on interests or diagnostic choices).\n";
+            } else if (navigation === 'modular') {
+                prompt += "Modular Index Sandbox (Provide a structured hub menu so the student can navigate asynchronously to distinct modular segments independently).\n";
+            } else if (navigation === 'socratic') {
+                prompt += "Socratic Dialogue Loop (Present concepts alongside inquiry checkpoints. Require questions answered to pass roadblocks before explaining subsequent details).\n";
+            }
+            prompt += `\n`;
+
+            // Active Component Directives
+            prompt += `--- MANDATORY COMPONENT STRUCTURE ---\n`;
+            prompt += `Please generate the lesson utilizing EXACTLY the components requested below. Do not omit any of the active blocks:\n\n`;
+
+            if (components.title) {
+                prompt += `[COMPONENT: LESSON TITLE]\n`;
+                prompt += `-> Create a creative, highly compelling title that instantly draws interest to "${topic}" while keeping it clear and illustrative.\n\n`;
+            }
+            if (components.subject) {
+                prompt += `[COMPONENT: SUBJECT/CONTEXT OVERVIEW]\n`;
+                prompt += `-> Frame the broader subject scope. Clearly define the real-world contextual relevance of studying this subject in today's environment.\n\n`;
+            }
+            if (components.objectives) {
+                prompt += `[COMPONENT: LEARNING OBJECTIVES]\n`;
+                prompt += `-> Design exactly 3 clear, measurable learning objectives using actionable Bloom's Taxonomy verbs (e.g., Identify, Compare, Synthesize) customized for ${audience}.\n\n`;
+            }
+            if (components.terms) {
+                prompt += `[COMPONENT: KEY TERMS GLOSSARY]\n`;
+                prompt += `-> List 5 core terms critical for mastering this lesson. For each, provide a crisp definition plus an illustrative sentence demonstrating usage.\n\n`;
+            }
+            if (components.concepts) {
+                prompt += `[COMPONENT: KEY CONCEPTS BREAKDOWN]\n`;
+                prompt += `-> Divide the lesson topic into 3 logical foundational blocks or mini-concepts, laying out a logical path towards complete subject mastery.\n\n`;
+            }
+            if (components.pretest) {
+                prompt += `[COMPONENT: PRE-TEST DIAGNOSTIC]\n`;
+                prompt += `-> Construct a quick, zero-friction 3-question diagnostic quiz. Use multiple-choice questions designed to identify prior misconceptions before moving to content.\n\n`;
+            }
+            if (components.content) {
+                prompt += `[COMPONENT: CORE CONTENT BODY]\n`;
+                prompt += `-> Present the core curriculum. Make it readable using clear subsections, dynamic bullets, and emphasized points to avoid dense walls of text.\n\n`;
+            }
+            if (components.analogies) {
+                prompt += `[COMPONENT: VIVID ANALOGIES]\n`;
+                prompt += `-> Provide at least 1-2 vivid, memorable analogies comparing abstract conceptual frameworks in this lesson to familiar objects/systems (e.g., cell parts to factory machines).\n\n`;
+            }
+            if (components.examples) {
+                prompt += `[COMPONENT: REAL-WORLD APPLICATIONS & EXAMPLES]\n`;
+                prompt += `-> Describe real-life scenarios, case studies, or natural events where this phenomenon/topic actively plays out to make theory practical.\n\n`;
+            }
+            if (components.summary) {
+                prompt += `[COMPONENT: LESSON SUMMARY]\n`;
+                prompt += `-> Provide a concise, high-impact concluding paragraph reinforcing how all elements tie together.\n\n`;
+            }
+            if (components.review) {
+                prompt += `[COMPONENT: POST-LESSON REVIEW QUIZ]\n`;
+                prompt += `-> Create a 5-question comprehensive quiz to check retention. For each question, provide detailed, constructive explanation feedback for why the correct answer is right and others are incorrect.\n\n`;
+            }
+            if (components.takeaways) {
+                prompt += `[COMPONENT: KEY TAKEAWAYS]\n`;
+                prompt += `-> Bullet out a 'cheat sheet' checklist summarizing the most critical technical rules, formulas, or concepts to remember.\n\n`;
+            }
+            if (components.ada) {
+                prompt += `[COMPONENT: ADA COMPLIANCE & ACCESSIBILITY CHECKLIST]\n`;
+                prompt += `-> Outline specific accommodations and instructions to make this material fully accessible (e.g., descriptions for images, simplified reading paths for screen-readers, clear typography recommendations).\n\n`;
+            }
+
+            // Platform Specific Wrapping
+            if (platform === 'claude') {
+                prompt += `\n--- FORMATTING EXPORT REQUIREMENTS ---\n`;
+                prompt += `Please structure the entire outcome inside logical XML wrapping tags matching each selected block name (e.g., <lesson_title>, <learning_objectives>, etc.). Ensure all math equations are formatted in LaTeX format enclosing inline formulas in $ and display formulas in $$.\n`;
+            } else {
+                prompt += `\n--- FORMATTING EXPORT REQUIREMENTS ---\n`;
+                prompt += `Please format the lesson clearly using beautiful Markdown with clean header hierarchies (#, ##, ###), bold text for emphasis, and structured bullet lists. Ensure all math equations are formatted in LaTeX format enclosing inline formulas in $ and display formulas in $$.\n`;
+            }
+
+            document.getElementById('promptOutput').value = prompt;
+        }
+
+        // Copy Utility Using ExecCommand (For robust fallback safety)
+        function copyPromptToClipboard() {
+            const copyText = document.getElementById("promptOutput");
+            
+            // Select text area
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                // Execute standard document copy
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast("Copied to Clipboard successfully!");
+                } else {
+                    showToast("Failed to copy. Please select and copy manually.");
+                }
+            } catch (err) {
+                showToast("Error: Browser clipboard access denied.");
+            }
+        }
+
+        // Dynamic Download Handler (md, txt, json)
+        function downloadPrompt(format) {
+            const rawText = document.getElementById('promptOutput').value;
+            let finalContent = rawText;
+            let filename = `lesson_prompt_${Date.now()}`;
+            let mimeType = 'text/plain';
+
+            if (format === 'json') {
+                filename += '.json';
+                mimeType = 'application/json';
+                const jsonObject = {
+                    title: "ScribeCraft Compiled AI Lesson Prompt",
+                    generatedAt: new Date().toISOString(),
+                    metadata: {
+                        topic: document.getElementById('lessonTopic').value,
+                        targetAudience: document.getElementById('targetAudience').value,
+                        tone: document.getElementById('lessonTone').value,
+                        navigation: document.querySelector('input[name="navigationPattern"]:checked')?.value || 'linear'
+                    },
+                    promptContent: rawText
+                };
+                finalContent = JSON.stringify(jsonObject, null, 4);
+            } else if (format === 'md') {
+                filename += '.md';
+                mimeType = 'text/markdown';
+            } else {
+                filename += '.txt';
+            }
+
+            const blob = new Blob([finalContent], { type: mimeType });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            
+            // Trigger hidden download link
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showToast(`Downloaded successfully as ${format.toUpperCase()}!`);
+        }
+
+        // Custom Toast Notification Controller
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            
+            toastMsg.innerText = message;
+            
+            // Slide/Fade Toast in
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            // Fade out after 2.5 seconds
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+
+        // Theme Switcher engine
+        function setupTheme() {
+            const themeToggleBtn = document.getElementById('themeToggle');
+            const sunIcon = document.getElementById('themeSun');
+            const moonIcon = document.getElementById('themeMoon');
+
+            themeToggleBtn.addEventListener('click', () => {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    sunIcon.classList.add('hidden');
+                    moonIcon.classList.remove('hidden');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    sunIcon.classList.remove('hidden');
+                    moonIcon.classList.add('hidden');
+                }
+            });
+
+            // Initial icon synchronization
+            if (document.documentElement.classList.contains('dark')) {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
